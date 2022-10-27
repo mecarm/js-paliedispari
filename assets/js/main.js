@@ -33,11 +33,14 @@ function pariDispari(){
     let num = parseInt(prompt('Scrivi un numero da 1 a 5'));
     let numBot = parseInt(Math.floor(Math.random()* 6)+1);
     console.log(`numero utente è ${num}`);
+    document.getElementById('numero-utente').innerText = `il tuo numero è ${num}`;
     console.log(`numero pc è ${numBot}`);
+    document.getElementById('numero-pc').innerText = `il numero generato dal bot è ${numBot}`;
     let addnum = num + numBot;
     console.log(addnum);
     sommaNumeri(addnum);
     victory(scelta, choice);  
+    document.getElementById('somma').innerText = `la somma dei due numeri è ${addnum} e quindi è ${choice}`;
 }
 
 function sommaNumeri(param1){
